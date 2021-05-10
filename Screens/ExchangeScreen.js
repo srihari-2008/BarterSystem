@@ -1,7 +1,8 @@
 import React from 'react';
 import { Alert, StyleSheet, Text, View, TextInput, Modal, ScrollView, KeyboardAvoidingView,TouchableOpacity} from 'react-native';
-import db from "../Config"
+import db from "../config"
 import firebase from "firebase"
+import {MyHeader} from "../Components/MyHeader"
 
 export default class ExchangeScreen extends React.Component{
     constructor(){
@@ -23,7 +24,7 @@ export default class ExchangeScreen extends React.Component{
         db.collection("Exchange_Request").add({
             user_Id:userId,
             item_Name:itemName,
-            reason_To_Request:descriptionForItem,
+            descriptionForItem:descriptionForItem,
             request_Id:randomRequestId
         })
          this.setState({
@@ -37,6 +38,7 @@ export default class ExchangeScreen extends React.Component{
     render(){
         return(
             <View style={{flex:1}}>
+                 <MyHeader title="ExchangeItems" navigation ={this.props.navigation}/>
                 <KeyboardAvoidingView style={styles.keyboardStyle}>
 
                 <TextInput 
