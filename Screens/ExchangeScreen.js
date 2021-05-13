@@ -2,7 +2,7 @@ import React from 'react';
 import { Alert, StyleSheet, Text, View, TextInput, Modal, ScrollView, KeyboardAvoidingView,TouchableOpacity} from 'react-native';
 import db from "../config"
 import firebase from "firebase"
-import {MyHeader} from "../Components/MyHeader"
+import MyHeader from "../Components/MyHeader" 
 
 export default class ExchangeScreen extends React.Component{
     constructor(){

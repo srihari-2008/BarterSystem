@@ -22,7 +22,7 @@ constructor(){
 userLogin=(emailId,password)=>{
     firebase.auth().signInWithEmailAndPassword(emailId,password)
     .then(()=>{
-        return Alert.alert("Succesfully Logged In")
+      this.props.navigation.navigate("HomeScreen")
     })
     .catch((error)=>{
      var errorCode=error.code
@@ -165,7 +165,7 @@ return(
             
              <Image 
              source={require("../assets/Bartering.jpg")}
-             styles={{height:50,width:50,alignself:"center"}}
+             style={{height:65,width:65,alignself:"center"}}
              />
 
             <Text style={styles.title}>

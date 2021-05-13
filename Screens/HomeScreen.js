@@ -4,7 +4,7 @@ import db from "../config"
 import firebase from "firebase"
 import { FlatList } from 'react-native-gesture-handler';
 import {ListItem} from "react-native-elements"
-import {MyHeader} from "../Components/MyHeader"
+import MyHeader from "../Components/MyHeader"
 
 export default class HomeScreen extends React.Component{
     constructor(){
